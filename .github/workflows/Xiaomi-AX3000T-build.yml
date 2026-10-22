@@ -19,7 +19,7 @@ on:
 
 env:
   REPO_URL: https://github.com/chasey-dev/immortalwrt-mt798x-rebase
-  REPO_BRANCH: 25.12
+  REPO_BRANCH: 23.05
   REPO_COMMIT: 
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: Xiaomi-AX3000T/.config
@@ -141,7 +141,7 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "release_tag=$(date +"%Y.%m.%d-%H%M")-Xiaomi-AX3000T-OpenWrt-25">> $GITHUB_OUTPUT
+        echo "release_tag=$(date +"%Y.%m.%d-%H%M")-Xiaomi-AX3000T-OpenWrt-23">> $GITHUB_OUTPUT
         touch release.txt
         echo "The default IP address is 192.168.31.1" >> release.txt
         echo "📥 Firmware download" >> release.txt
